@@ -5,5 +5,5 @@ export async function getUsers() {
     method: "GET",
   })
   const data = await response.json();
-  return data
+  return data.results
 }
