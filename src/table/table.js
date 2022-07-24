@@ -40,31 +40,19 @@ function UsersTable() {
               users?.results?.map((e, index) => {
                 return(
                   <tr key={index}>
-                    <td scope={"row"}>
-                      {e.name.first}
-                    </td>
-                    <td>
-                      {e.name.last}
-                    </td>
-                    <td>
-                      {e.dob.age}
-                    </td>
-                    <td>
-                      {e.gender}
-                    </td>
-                    <td>
-                      {e.email}
-                    </td>
-                    <td>
-                      {e.nat}
-                    </td>
-                    <td>
-                      <UserPic src={`${e.picture.thumbnail}`} alt={"user"}/>
-                    </td>
-                  </tr>
-                )
-              })
-            }
+                  <td scope={"row"}>{e.name.first}</td>
+                  <td>{e.name.last}</td>
+                  <td>{e.dob.age}</td>
+                  <td>{e.gender}</td>
+                  <td>{e.email}</td>
+                  <td>{e.nat}</td>
+                  <td>
+                    <UserPic src={`${e.picture.thumbnail}`} alt={"user"}/>
+                  </td>
+                </tr>
+              )
+            })
+          }
           
         </tbody>
       </Table>
