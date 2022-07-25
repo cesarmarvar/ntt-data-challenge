@@ -21,6 +21,12 @@ function UsersTable() {
     .catch(console.log)
   }, [])
 
+  /* ============ Funcion para ordenar la data por edad ============= */
+  const ageOrder = users.sort((a, b) => {
+    return a.dob.age - b.dob.age
+  })
+
+
   return (
     <div>
       <Table className="table-primary" style={{textAlign: "center"}} striped hover bordered>
