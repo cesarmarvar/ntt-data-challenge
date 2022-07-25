@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react"
 import { getUsers } from '../services/api-service';
 
 const Heading = styled.th`
-  width: 150px;
+  max-width: 10px;
 `
 const UserPic = styled.img`
   border-radius: 50px;
@@ -65,10 +65,10 @@ function UsersTable() {
           </tr>
         </thead>
         <tbody>
-            {
-              users?.results?.map((e, index) => {
-                return(
-                  <tr key={index}>
+          {
+            ageOrder?.map((e, index) => {
+              return(
+                <tr key={index}>
                   <td scope={"row"}>{e.name.first}</td>
                   <td>{e.name.last}</td>
                   <td>{e.dob.age}</td>
@@ -82,7 +82,6 @@ function UsersTable() {
               )
             })
           }
-          
         </tbody>
       </Table>
       <a style={{textDecoration: "none"}} href='https://randomuser.me/api/?seed=foobar&results=15&format=csv&dl'>
@@ -90,7 +89,6 @@ function UsersTable() {
       </a>
     </div>
   );
-
 }
 
 export default UsersTable;
