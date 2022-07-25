@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react"
 import { getUsers } from '../services/api-service';
 
 const Heading = styled.th`
-  max-width: 10px;
+  max-width: 150px;
 `
 const UserPic = styled.img`
   border-radius: 50px;
