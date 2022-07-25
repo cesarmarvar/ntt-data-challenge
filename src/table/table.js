@@ -10,6 +10,29 @@ const Heading = styled.th`
 const UserPic = styled.img`
   border-radius: 50px;
 `
+const Button = styled.button`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  background: #2D9CDB;
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-family: Arial;
+  font-weight: 700;
+  margin: 0 auto;
+  &:hover {
+    transition: .1s ease-in;
+    background: #006bb3;
+    transform: scale(1.1);
+  :active {
+    margin-top: 18px;
+  }
+`
 
 function UsersTable() {
   
@@ -62,6 +85,9 @@ function UsersTable() {
           
         </tbody>
       </Table>
+      <a style={{textDecoration: "none"}} href='https://randomuser.me/api/?seed=foobar&results=15&format=csv&dl'>
+        <Button>Download raw data</Button>
+      </a>
     </div>
   );
 
